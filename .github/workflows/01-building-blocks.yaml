@@ -1,4 +1,24 @@
 name: 01 - Building Blocks
-  - push
-  - workflow_dispatch
+
+on: push
+
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Diga ola
+        run: echo "Olá Mundo"
+  echo-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Failed step
+        run: |
+          echo "Vou falhar"
+          exit 1
+      - name: Diga Adeus
+        run: "Adeus!"
+
+
+
+
   
