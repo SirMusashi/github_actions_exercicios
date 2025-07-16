@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Failed step
         run: |
-          echo "Vou falhar"
-          exit 1
+          echo "Vou funcionar"
+          exit 0
       - name: Diga Adeus
         run: "Adeus!"
 
