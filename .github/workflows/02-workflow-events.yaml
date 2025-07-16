@@ -1,10 +1,12 @@
 name: 02 - Workflow Events 
 
-on: push
+on: 
+    push:
+    pull_request:
 
 jobs:
     echo: 
         runs-on: ubuntu-latest
         steps:
             - name: Mostre os Triggers
-              run: echo "Eu fui engatilhado(triggered) por a(n) ${{ github.event_name }} event."
+              run: echo "Eu fui engatilhado(triggered) por um(a) ${{ github.event_name }} event."
