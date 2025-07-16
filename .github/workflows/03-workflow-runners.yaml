@@ -16,9 +16,14 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: mostrar OS
-              run:
+              shell: bash
+              run: |
+                echo "Este Job está rodando em um Windows runner"
+                echo "Runner OS: $RUNNER_OS"
     mac-echo:
         runs-on: macos-latest
         steps:
             - name: mostrar OS
-            run:
+              run: |
+                echo "Este Job está rodando em um Mac runner"
+                echo "Runner OS: $RUNNER_OS"
