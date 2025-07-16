@@ -16,7 +16,7 @@ jobs:
           echo "Vou funcionar"
           exit 0
       - name: Diga Adeus
-        run: "Adeus!"
+        run: echo "Adeus!"
 
 
 
