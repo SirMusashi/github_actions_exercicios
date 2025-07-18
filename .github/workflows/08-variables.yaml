@@ -29,4 +29,4 @@ jobs:
               env:
                 OVERWRITTEN: "Eu fui reescrita no nível step"
               run: |
-                echo "Variável em nível step${{ env.OVERWRITTEN}}"
+                echo "Variável em nível step: ${{ env.OVERWRITTEN}}"
