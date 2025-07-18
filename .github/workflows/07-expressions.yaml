@@ -10,7 +10,7 @@ on:
 
 jobs:
      echo:
-        runs-on: ubunto-latest
+        runs-on: ubuntu-latest
         steps:
             - name: '[debug] Print startup data'
               if: ${{inputs.debug}}
