@@ -1,0 +1,26 @@
+name: 07 - Using Expressions
+
+on:
+    push:
+    workflow_dispatch:
+        inputs:
+            debug:
+                type: boolean
+                default: false
+
+jobs:
+     echo:
+        runs-on: ubunto-latest
+        steps:
+            - name: '[debug] Print startup data'
+              if: ${{inputs.debug}}
+              run: |
+                echo "Triggered por: ${{ github.event_name }}"
+                echo "Branch: ${{ github.ref }} "
+                echo "Commit SHA ${{github.sha}}"
+                echo "Runner OS: ${{runner.os}}"  
+            - name: '[debug] Print quando o trigger vem da main '
+              if: ${{inputs.debug && github.ref == 'refs/heads/main'}}
+              run: echo "Eu fui triggered pelo main"
+            - name: 'Saudação'
+              run: echo "Koé galera!"
